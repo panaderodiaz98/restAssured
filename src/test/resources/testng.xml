@@ -1,0 +1,9 @@
+<suite name="Regresion suite">
+    <test name="Regresion Tests">
+        <groups>
+            <run>
+                <include name="regresion" />
+            </run>
+        </groups>
+    </test>
+</suite>

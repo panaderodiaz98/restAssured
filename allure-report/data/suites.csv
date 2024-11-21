@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2978","episodeSchemaTest","Default Suite","Wed Nov 20 18:41:49 ART 2024","passed","Wed Nov 20 18:41:52 ART 2024","schemaTests.EpisodeSchema","ApiTestingRestAssured","schemaTests.EpisodeSchema","episodeSchemaTest"
+"","3177","characterSchema","Default Suite","Wed Nov 20 18:31:15 ART 2024","passed","Wed Nov 20 18:31:19 ART 2024","schemaTests.CharacterSchema","ApiTestingRestAssured","schemaTests.CharacterSchema","characterSchema"

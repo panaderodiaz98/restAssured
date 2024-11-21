@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "dimension": {
+      "type": "string"
+    },
+    "residents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "url": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "dimension",
+    "residents",
+    "url",
+    "created"
+  ]
+}
