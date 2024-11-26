@@ -1,4 +1,4 @@
-package authorizationTokenTests;
+package authorizationTokenTests.dummyJson;
 
 import io.qameta.allure.*;
 import io.restassured.response.Response;
@@ -19,8 +19,8 @@ public class LoginUserWithTokenTest {
 
     @Test(priority = 1, groups = {"regresion","token","dummyjson"})
     @Owner("Martin Diaz")
-    @Epic("Regresion")
-    @Feature("Token tests")
+    @Epic("Token tests")
+    @Feature("Dummyjson")
     @Description("Validamos la generacion del token a partir de un usuario valido adjuntado en el body")
     @Link("https://dummyjson.com/docs/auth#auth-me")
     public void loginAndGetToken(){
@@ -50,8 +50,8 @@ public class LoginUserWithTokenTest {
 
     @Test(priority = 2, groups = {"regresion","token","dummyjson"})
     @Owner("Martin Diaz")
-    @Epic("Regresion")
-    @Feature("Token tests")
+    @Epic("Token tests")
+    @Feature("Dummyjson")
     @Description("Validamos la generacion del refresh token a partir de un token previamente solicitado")
     @Link("https://dummyjson.com/docs/auth#auth-me")
     public void validateRefreshToken(){
