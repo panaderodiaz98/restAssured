@@ -13,8 +13,8 @@ public class EpisodeSchemaTest {
     private String baseUri = "https://rickandmortyapi.com/api/episode";
 
     @Test(groups = {"regresion"})
-    @Epic("Regresion")
-    @Feature("Schema Tests")
+    @Epic("Schema Tests")
+    @Feature("Rick and morty api")
     @Description("Validamos el cuerpo JSON de respuesta correspendientes a Episodes segun documentacion")
     @Link("https://rickandmortyapi.com/documentation/#episode-schema")
     public void episodeSchemaTest(){

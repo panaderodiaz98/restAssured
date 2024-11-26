@@ -12,8 +12,8 @@ import static io.restassured.RestAssured.*;
 public class CharacterSchemaTest {
     private String baseUri = "https://rickandmortyapi.com/api/character";
     @Test(groups = {"regresion"})
-    @Epic("Regresion")
-    @Feature("Schema Tests")
+    @Epic("Schema Tests")
+    @Feature("Rick and morty api")
     @Description("Validamos el cuerpo JSON de respuesta correspendientes a Characters segun documentacion")
     @Link("https://rickandmortyapi.com/documentation/#character-schema")
     public void characterSchemaTest(){
