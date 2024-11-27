@@ -41,7 +41,7 @@
                 <!-- Ruta donde se guardan los resultados generados por Allure -->
                 <resultsDirectory>target/allure-results</resultsDirectory>
                 <!-- Ruta donde se generará el reporte de Allure -->
-                <reportDirectory>target/site/allure-report</reportDirectory>
+                <reportDirectory>target/allure-report</reportDirectory>
                   </configuration>
             <executions>
                 <execution>
