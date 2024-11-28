@@ -41,12 +41,18 @@ jobs:
       # Paso 4: Ejecutar pruebas y generar resultados de Allure
       - name: Run tests with Maven
         run: mvn clean test
+        
+      # Paso 4: Instalar Allure
+      - name: Install Allure CLI
+        run: npm install -g allure-commandline
 
+      # Paso 5: Generar el reporte Allure
       - name: Generate Allure Report
         run: mvn allure:report
-      # Paso 5: Adjuntar el reporte de Allure como artefacto
-      - name: Upload Allure Report
-        uses: actions/upload-artifact@v3
+
+      # Paso 6: Publicar el reporte Allure
+      - name: Upload Allure Report as an artifact
+        uses: actions/upload-artifact@v4
         with:
           name: allure-report
-          path: target/allure-results
+          path: target/site/allure-maven-plugin
