@@ -42,30 +42,17 @@ jobs:
       - name: Run tests with Maven
         run: mvn clean test
         
-      - name: Run tests with Maven
-        run: mvn allure:report
-        
-      - name: Build test report
-        uses: simple-elf/allure-report-action@v1.7
-        if: always()
-        with:
-          main: main
-          allure_history: allure-history
-          allure_results: target/allure-results
+      # Paso 4: Instalar Allure
+      - name: Install Allure CLI
+        run: npm install -g allure-commandline
 
-      - name: Publish test report
-        uses: peaceiris/actions-gh-pages@v3
-        if: always()
-        with:
-          publish_branch: main
-          publish_dir: allure-history
+      # Paso 5: Generar el reporte Allure
+      - name: Generate Allure Report
+        run: allure generate target/allure-results -o allure-report
 
-     # - name: Generate Allure Report
-      #  run: |
-       #   mvn allure:report
-      # Paso 5: Adjuntar el reporte de Allure como artefacto
-     # - name: Upload Allure Report
-       # uses: actions/upload-artifact@v3
-       # with:
-        #  name: allure-report
-         # path: target/allure-results
+      # Paso 6: Publicar el reporte Allure
+      - name: Upload Allure Report as an artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: allure-report
