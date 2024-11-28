@@ -30,5 +30,7 @@ public class DeserializarTest {
 //        Validamos los datos obtenidos
         Assert.assertTrue(!response.getEpisode().isEmpty());
         Assert.assertTrue(response.getId() == id);
+
+        System.out.println(response.getId());
     }
 }
