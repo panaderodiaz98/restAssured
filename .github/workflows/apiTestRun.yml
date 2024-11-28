@@ -43,8 +43,7 @@ jobs:
         run: mvn clean test
 
       - name: Generate Allure Report
-        run: |
-          mvn allure:report
+        run: mvn allure:report
       # Paso 5: Adjuntar el reporte de Allure como artefacto
       - name: Upload Allure Report
         uses: actions/upload-artifact@v3
