@@ -49,6 +49,7 @@ jobs:
         uses: simple-elf/allure-report-action@v1.7
         if: always()
         with:
+          main: main
           allure_history: allure-history
           allure_results: target/allure-results
 
