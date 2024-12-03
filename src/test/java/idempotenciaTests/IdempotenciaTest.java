@@ -26,7 +26,7 @@ public class IdempotenciaTest {
         orderId = order();
         System.out.println(orderId);
     }
-    @Test(groups = {"regresion","idempotencia","simplebooks"})
+    @Test(priority = 1, groups = {"regresion","idempotencia","simplebooks"})
     @Owner("Martin Diaz")
     @Epic("Idempotencia")
     @Feature("SimpleBooksApi")
@@ -89,7 +89,7 @@ public class IdempotenciaTest {
         Assert.assertTrue(!newClientName.equals(firstNameUpdate));
 
     }
-    @Test(groups = {"regresion","idempotencia","simplebooks"})
+    @Test(priority = 2, groups = {"regresion","idempotencia","simplebooks"})
     @Owner("Martin Diaz")
     @Epic("Idempotencia")
     @Feature("SimpleBooksApi")
