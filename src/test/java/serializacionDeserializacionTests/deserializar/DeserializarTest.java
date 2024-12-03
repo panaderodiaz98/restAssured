@@ -1,5 +1,6 @@
 package serializacionDeserializacionTests.deserializar;
 
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.Assert;
@@ -16,7 +17,12 @@ public class DeserializarTest {
         RestAssured.baseURI = "https://rickandmortyapi.com/api";
         id = 2;
     }
-    @Test
+    @Test(groups = {"regresion","Rick and morty api","deserializar"})
+    @Owner("Martin Diaz")
+    @Epic("Deserializar test")
+    @Feature("Rick and morty api")
+    @Description("Obtenemos mediante un get un personaje X mediante su ID y deserializamos sus atributos en una clase")
+    @Link("https://rickandmortyapi.com/documentation/#character-schema")
     public void characterDeserializar(){
 //        Generamos el response del tipo clase Character
         CharacterRickAndMorty response = given()
